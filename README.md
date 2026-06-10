@@ -56,6 +56,19 @@ cd filemanager-frontend
 npm install
 npm run dev
 ```
+## Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### File Upload
+
+![Upload](screenshots/upload-file.png)
+
+### Search Feature
+
+![Search](screenshots/search-feature.png)
 
 ##  Learning Outcomes
 
