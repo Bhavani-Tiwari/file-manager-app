@@ -1,0 +1,12 @@
+# React
+filemanager-frontend/node_modules/
+
+# Spring Boot
+filemanager/target/
+
+# Upload files
+filemanager/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
