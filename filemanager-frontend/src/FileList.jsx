@@ -51,8 +51,9 @@ const totalSize = files.reduce((acc, file) => acc + file.fileSize, 0);
     marginTop: "40px"
   }}>
     <div style={{
-      width: "80%",
-      backgroundColor: "black",
+      width: "100%",
+      maxWidth: "1400px",
+      backgroundColor: "#1f2937",
       padding: "20px",
       borderRadius: "10px",
       boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
@@ -72,9 +73,31 @@ const totalSize = files.reduce((acc, file) => acc + file.fileSize, 0);
     }}
   />
 
-  <div style={{ marginTop: "10px" }}>
-    <strong>Total Files:</strong> {files.length} <br />
-    <strong>Total Storage:</strong> {(totalSize / 1024).toFixed(2)} KB
+  <div
+  style={{
+    display: "flex",
+    gap: "20px",
+    marginTop: "15px"
+  }}
+>
+  <div
+    style={{
+      background: "#374151",
+      padding: "15px",
+      borderRadius: "8px"
+    }}
+  >
+    📁 Total Files: {files.length}
+  </div>
+
+  <div
+    style={{
+      background: "#374151",
+      padding: "15px",
+      borderRadius: "8px"
+    }}
+  >
+    💾 Storage: {(totalSize / 1024).toFixed(2)} KB
   </div>
 </div>
 
@@ -115,9 +138,14 @@ const totalSize = files.reduce((acc, file) => acc + file.fileSize, 0);
       file.fileName?.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .map((file) => (
-            <tr key={file.id}>
+            <tr
+  key={file.id}
+  style={{
+    borderBottom: "1px solid #374151"
+  }}
+>
               <td>{file.id}</td>
-              <td>{file.fileName}</td>
+              <td style={{ padding: "15px" }}>{file.fileName}</td>
               <td>
   {file.fileType.startsWith("image/")
     ? "🖼️ "
@@ -135,7 +163,7 @@ const totalSize = files.reduce((acc, file) => acc + file.fileSize, 0);
   onClick={() => handleDownload(file.id)}
   style={{
     marginRight: "10px",
-    backgroundColor: "green",
+    backgroundColor: "#2563eb",
     color: "white",
     padding: "6px 10px",
     border: "none",
@@ -149,7 +177,7 @@ const totalSize = files.reduce((acc, file) => acc + file.fileSize, 0);
 <button
   onClick={() => handleDelete(file.id)}
   style={{
-    backgroundColor: "red",
+    backgroundColor: "#6b7280",
     color: "white",
     padding: "6px 10px",
     border: "none",
@@ -168,6 +196,7 @@ const totalSize = files.reduce((acc, file) => acc + file.fileSize, 0);
       </table>
     </div>
     </div>
+  </div>
   );
 }
 

@@ -10,8 +10,24 @@ function App() {
   };
   
   return (
-  <div style={{ padding: "40px" }}>
-    <h1>File Manager App</h1>
+    <div
+  style={{
+    minHeight: "100vh",
+    backgroundColor: "#111827",
+    color: "white",
+    padding: "40px"
+  }}
+>
+    
+    <h1
+  style={{
+    textAlign: "center",
+    marginBottom: "40px",
+    fontSize: "3rem"
+  }}
+>
+  📁 File Manager App
+</h1>
     <FileUpload onUploadSuccess={handleUploadSuccess} />
     <FileList refreshTrigger={refresh} />
   </div>

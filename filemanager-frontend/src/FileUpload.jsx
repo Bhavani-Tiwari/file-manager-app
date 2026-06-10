@@ -40,15 +40,12 @@ function FileUpload({ onUploadSuccess }) {
     marginTop: "30px"
   }}>
     <div style={{
-      width: "60%",
+      width: "100%",
+      maxWidth: "1200px",
       padding: "20px",
       borderRadius: "10px",
-      backgroundColor: "black",
-      boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
+      backgroundColor: "#1f2937"
     }}>
-
-      <h3 style={{ textAlign: "center" }}>📤 Upload File</h3>
-
       <div style={{
         display: "flex",
         justifyContent: "space-between",
@@ -78,7 +75,6 @@ function FileUpload({ onUploadSuccess }) {
           Upload
         </button>
       </div>
-
     </div>
   </div>
 );
